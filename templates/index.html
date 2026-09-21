@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Potencial de Automação</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="cabecalho">
+            <h1>Potencial de Automação</h1>
+
+            <p>
+                Responda às perguntas abaixo para identificar
+                se o seu processo possui potencial para automação.
+            </p>
+        </section>
+
+
+        <form id="form-avaliacao">
+
+            <!-- PERGUNTA 1 -->
+            <div class="pergunta">
+
+                <p>
+                    1. Você realiza esse processo várias vezes por semana?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="frequente"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="frequente"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- PERGUNTA 2 -->
+            <div class="pergunta">
+
+                <p>
+                    2. Você repete praticamente os mesmos passos
+                    sempre que executa esse processo?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="repetitivo"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="repetitivo"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- PERGUNTA 3 -->
+            <div class="pergunta">
+
+                <p>
+                    3. As decisões desse processo seguem regras
+                    claras e bem definidas?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="regras_claras"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="regras_claras"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- PERGUNTA 4 -->
+            <div class="pergunta">
+
+                <p>
+                    4. As informações utilizadas nesse processo
+                    já estão em formato digital?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="dados_digitais"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="dados_digitais"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- PERGUNTA 5 -->
+            <div class="pergunta">
+
+                <p>
+                    5. Esse processo consome uma quantidade
+                    significativa de tempo da sua rotina?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="consome_tempo"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="consome_tempo"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <button type="submit">
+                Avaliar processo
+            </button>
+
+        </form>
+
+
+        <!-- RESULTADO -->
+        <section
+            id="resultado"
+            class="resultado"
+            hidden
+        >
+
+            <h2>Resultado</h2>
+
+            <p>
+                Pontuação:
+                <strong id="score"></strong>
+            </p>
+
+            <p>
+                Potencial de automação:
+                <strong id="potencial"></strong>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+
+</html>
