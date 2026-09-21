@@ -1,0 +1,7 @@
+services:
+  potencial_automation:
+    build: .
+    container_name: potencial_automation
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
