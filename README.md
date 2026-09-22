@@ -26,17 +26,17 @@ O usuário responde algumas perguntas sobre o processo e a aplicação calcula u
 
 ## Como executar
 
-Clone o projeto
+### Clone o projeto
 
 git clone 
 
-Suba a aplicação com Docker:
+### Suba a aplicação com Docker:
 docker compose up --build
 
-Acesse: 
+### Acesse: 
 http://localhost:5000
 
-##Funcionamento
+### Funcionamento
 
 O formulário envia as respostas para a API:
 
