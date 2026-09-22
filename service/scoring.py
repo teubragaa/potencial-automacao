@@ -1,41 +1,26 @@
-def calcular_pontuacao(data):
+def avaliar_processo(dados):
     score = 0
 
-    if data.get("frequente"):
-        score += 20
+    perguntas = [
+        "frequente",
+        "repetitivo",
+        "regras_claras",
+        "dados_digitais",
+        "consome_tempo"
+    ]
 
-    if data.get("repetitivo"):
-        score += 20
+    for pergunta in perguntas:
+        if dados.get(pergunta) == "sim":
+            score += 20
 
-    if data.get("regras_claras"):
-        score += 20
-
-    if data.get("dados_digitais"):
-        score += 20
-
-    if data.get("consome_tempo"):
-        score += 20
-
-    return score
-
-
-def classificar_potencial(score):
     if score >= 80:
-        return "Alto"
-
-    elif score >= 60:
-        return "Médio"
-
+        potential = "Alto"
+    elif score >= 40:
+        potential = "Médio"
     else:
-        return "Baixo"
-
-
-def avaliar_processo(data):
-    score = calcular_pontuacao(data)
-
-    potencial = classificar_potencial(score)
+        potential = "Baixo"
 
     return {
         "score": score,
-        "potential": potencial
+        "potential": potential
     }
