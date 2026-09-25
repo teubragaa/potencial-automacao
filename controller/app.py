@@ -22,7 +22,7 @@ def avaliar():
         return jsonify({"error": str(error)}), 400
 
 
-@app.post("/api/analisar-texto-livre")
+@app.post("/api/analisar-texto")
 def api_analisar_texto():
     try:
         data = request.get_json(silent=True) or {}
